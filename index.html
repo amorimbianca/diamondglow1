@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Glow | Joalheria de Luxo</title>
+    <meta name="description"
+        content="Descubra a elegância e sofisticação das joias Diamond Glow. Coleções exclusivas de anéis, colares e brincos de luxo.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body data-theme="light">
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">DIAMOND GLOW</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="nav-icons">
+            <i class="fas fa-search" id="search-icon" title="Buscar"></i>
+            <i class="fas fa-user" id="login-icon" title="Entrar"></i>
+            <div style="position: relative;">
+                <i class="fas fa-shopping-cart" id="cart-icon" title="Carrinho"></i>
+                <span id="cart-count"
+                    style="position: absolute; top: -10px; right: -10px; background: var(--accent-color); color: black; border-radius: 50%; padding: 2px 6px; font-size: 0.7rem; font-weight: bold; display: none;">0</span>
+            </div>
+            <i class="fas fa-moon" id="theme-toggle" title="Alterar Tema"></i>
+            <div class="hamburger" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="#home" class="bottom-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#produtos" class="bottom-nav-item">
+            <i class="fas fa-gem"></i>
+            <span>Produtos</span>
+        </a>
+        <div class="bottom-nav-item" id="mobile-search-btn">
+            <i class="fas fa-search"></i>
+            <span>Busca</span>
+        </div>
+        <div class="bottom-nav-item" id="mobile-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Carrinho</span>
+        </div>
+        <a href="#contato" class="bottom-nav-item">
+            <i class="fas fa-envelope"></i>
+            <span>Contato</span>
+    </div>
+    </div>
+
+    <!-- Hero Carousel -->
+    <section class="hero" id="home">
+        <div class="carousel-container" id="hero-carousel">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active" style="background-image: url('assets/images/hero1.png');">
+                <div class="hero-content">
+                    <h1>Elegância que Brilha</h1>
+                    <p>Descubra a perfeição em cada detalhe com nossas coleções exclusivas de alta joalheria.</p>
+                    <a href="#produtos" class="btn-primary">Comprar Agora</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-slide" style="background-image: url('assets/images/hero2.png');">
+                <div class="hero-content">
+                    <h1>Momentos Inesquecíveis</h1>
+                    <p>Joias pensadas para celebrar os marcos mais importantes da sua história.</p>
+                    <a href="#produtos" class="btn-primary">Ver Coleção</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-slide" style="background-image: url('assets/images/hero3.png');">
+                <div class="hero-content">
+                    <h1>A Essência do Luxo</h1>
+                    <p>Diamantes e pedras preciosas selecionadas com o mais alto rigor de qualidade.</p>
+                    <a href="#produtos" class="btn-primary">Explorar</a>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-btn prev" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+            
+            <!-- Indicators -->
+            <div class="carousel-dots" id="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Overlay -->
+    <div class="search-container" id="search-box">
+        <input type="text" id="product-search" placeholder="O que você está procurando?">
+    </div>
+
+    <!-- Products Section -->
+    <section id="produtos">
+        <h2 class="section-title">Nossas Joias</h2>
+        <div class="product-grid" id="product-list">
+            <!-- Os produtos serão inseridos via JavaScript -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" style="background-color: var(--card-bg);">
+        <h2 class="section-title">Sobre Nós</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; line-height: 1.8;">
+            <p>A Diamond Glow nasceu da paixão pela beleza eterna dos diamantes e pedras preciosas. Nossa missão é criar
+                peças que não sejam apenas acessórios, mas símbolos de amor, conquista e sofisticação.</p>
+            <p style="margin-top: 20px;">Cada peça é cuidadosamente desenhada e fabricada com os melhores materiais,
+                garantindo que cada cliente receba uma obra de arte única.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato">
+        <h2 class="section-title">Contato</h2>
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <p style="margin-bottom: 30px;">Dúvidas ou encomendas personalizadas? Entre em contato conosco.</p>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <p><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--accent-color);"></i> Av. das
+                    Joias, 1000 - Luxo, SP</p>
+                <p><i class="fas fa-phone" style="margin-right: 10px; color: var(--accent-color);"></i> (11) 99999-8888
+                </p>
+                <p><i class="fas fa-envelope" style="margin-right: 10px; color: var(--accent-color);"></i>
+                    contato@diamondglow.com</p>
+            </div>
+            <div style="margin-top: 40px; display: flex; justify-content: center; gap: 20px; font-size: 1.5rem;">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-whatsapp"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <i class="fas fa-times close-cart" id="close-cart"></i>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Itens do carrinho aparecem aqui -->
+            <p id="empty-cart-msg" style="text-align: center; margin-top: 20px;">Seu carrinho está vazio.</p>
+        </div>
+        <div class="cart-total">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <span>Total:</span>
+                <span class="total-price" id="total-price">R$ 0,00</span>
+            </div>
+            <a href="#" class="btn-checkout">Finalizar Compra</a>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Modal de Login -->
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal-content">
+            <i class="fas fa-times close-modal" id="close-login"></i>
+            <div class="login-container">
+                <h2>Entrar na sua conta</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" placeholder="Sua senha" required>
+                    </div>
+                    <button type="submit" class="btn-login">Entrar</button>
+                </form>
+                <div class="login-links">
+                    <a href="#">Esqueci minha senha</a>
+                    <a href="#">Não tem uma conta? Criar conta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalhes do Produto -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-content">
+            <i class="fas fa-times close-modal" id="close-product-modal"></i>
+            <div id="product-detail-content">
+                <!-- Preenchido via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="padding: 40px 5%; text-align: center; border-top: 1px solid var(--border-color); font-size: 0.9rem;">
+        <p>&copy; 2026 Diamond Glow Joalheria. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
